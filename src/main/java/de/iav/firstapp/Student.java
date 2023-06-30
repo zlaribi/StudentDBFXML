@@ -1,7 +1,11 @@
-public class Student {
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String courseOfStudies;
+package de.iav.firstapp;
+
+public record Student (
+    String firstName,
+    String lastName,
+    String email,
+    String courseOfStudie
+) {
 
 }
+

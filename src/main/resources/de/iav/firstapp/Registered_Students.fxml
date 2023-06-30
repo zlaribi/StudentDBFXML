@@ -6,16 +6,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.iav.firstapp.RegisteredStudentsController">
    <children>
-      <ListView layoutX="50.0" layoutY="150.0" prefHeight="250.0" prefWidth="400.0" />
-      <Button fx:id="PB_BackToRegistration" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" text="Back to Registration" />
-      <Text layoutX="88.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registered Students">
+      <ListView fx:id="registeredStudents" layoutX="50.0" layoutY="150.0" prefHeight="250.0" prefWidth="400.0" />
+      <Button fx:id="AddStudent" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" onAction="#switchToRegistration" text="Add Student" />
+      <Text layoutX="138.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registered Students">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
       <Button fx:id="PB_Delete_Student" layoutX="351.0" layoutY="440.0" mnemonicParsing="false" text="Delete Student" />
+      <Button fx:id="PB_BackToMain" layoutX="23.0" layoutY="19.0" mnemonicParsing="false" onAction="#switchBackToGreetings" text="Back to Main" />
    </children>
 </AnchorPane>

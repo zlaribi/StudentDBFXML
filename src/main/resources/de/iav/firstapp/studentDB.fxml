@@ -11,10 +11,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<FlowPane prefHeight="539.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<FlowPane prefHeight="539.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.iav.firstapp.StudentController">
    <children>
-      <VBox prefHeight="539.0" prefWidth="615.0" spacing="20.0">
+      <VBox fx:id="backButton" prefHeight="539.0" prefWidth="615.0" spacing="20.0">
          <children>
+            <Button mnemonicParsing="false" text="&lt; back" onAction="#switchBackToGreetings"/>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Studentenanmeldung" textAlignment="CENTER" wrappingWidth="614.21630859375">
                <font>
                   <Font size="37.0" />
@@ -27,7 +28,7 @@
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField id="firstName" />
+                  <TextField fx:id="firstNameField" />
                </children>
             </HBox>
             <HBox prefHeight="71.0" prefWidth="615.0">
@@ -37,7 +38,7 @@
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="lastNameField" />
                </children>
             </HBox>
             <HBox prefHeight="71.0" prefWidth="615.0">
@@ -47,7 +48,7 @@
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="emailField" />
                </children>
             </HBox>
             <HBox prefHeight="71.0" prefWidth="615.0">
@@ -57,13 +58,13 @@
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="courseField" />
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="101.0" prefWidth="615.0" spacing="50.0" VBox.vgrow="ALWAYS">
                <children>
-                  <CheckBox fx:id="gdprCheckbox" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" text="Datenschutzerklärung gelesen" />
-                  <Button id="registerButton" fx:id="registerButton" alignment="CENTER" mnemonicParsing="false" text="Registrieren" textAlignment="CENTER" />
+                  <CheckBox fx:id="gdprCheckbox" mnemonicParsing="false" prefHeight="59.0" prefWidth="190.0" text="Datenschutzerklärung gelesen" onAction="#isGdprBoxChecked"/>
+                  <Button id="registerButton" fx:id="registerButton" alignment="CENTER" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Registrieren" textAlignment="CENTER" />
                </children>
                <padding>
                   <Insets left="20.0" />
